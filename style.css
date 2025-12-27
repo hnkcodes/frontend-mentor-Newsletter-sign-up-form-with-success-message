@@ -1,0 +1,156 @@
+:root {
+  --blue800: hsl(234, 29%, 20%);
+  --blue700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+  --tomato: hsl(4, 100%, 67%);
+}
+
+* {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--blue800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--blue800);
+  font-size: 3.7rem;
+}
+
+.card-submission {
+  display: flex;
+  max-width: 900px;
+  background: var(--white);
+  border-radius: 1rem;
+  flex-direction: row;
+  padding: 1.2rem;
+}
+
+.content-wrapper {
+  margin: 2rem;
+}
+
+.image-wrapper {
+  flex: 0 0 400px;
+}
+
+.image-wrapper {
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("assets/images/illustration-sign-up-desktop.svg");
+}
+
+@media (max-width: 768px) {
+  .card-submission {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-image: url("assets/images/illustration-sign-up-mobile.svg");
+  }
+}
+
+.list img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 1.5rem;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+
+ul {
+  padding: 0;
+}
+
+p,
+ul,
+label {
+  color: var(--blue700);
+}
+
+article {
+  margin-bottom: 2rem;
+}
+
+input {
+  border: 0.1rem solid var(--grey);
+}
+
+.form-instruction {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 1rem;
+  font-size: 0.2rem;
+}
+
+.invalid-email-message {
+  color: var(--tomato);
+  margin: 0;
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+.invalid-input {
+  border: 0.1rem solid var(--tomato);
+  background: hsla(4, 100%, 67%, 0.15);
+}
+
+.button {
+  border: var(--blue800);
+  background: var(--blue800);
+  color: var(--white);
+}
+
+.button:hover {
+  cursor: pointer;
+  background: linear-gradient(red, var(--tomato));
+}
+
+.standard-rectangle {
+  border-radius: 0.3rem;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.thanks-img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.card-thanks {
+  max-width: 600px;
+  background: var(--white);
+  border-radius: 1rem;
+  flex-direction: row;
+  padding: 1.2rem;
+}
