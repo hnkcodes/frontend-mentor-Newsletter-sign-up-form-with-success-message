@@ -20,11 +20,6 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  color: var(--blue800);
-  font-size: 3.7rem;
-}
-
 .card-submission {
   display: flex;
   max-width: 900px;
@@ -32,6 +27,11 @@ h1 {
   border-radius: 1rem;
   flex-direction: row;
   padding: 1.2rem;
+}
+
+h1 {
+  color: var(--blue800);
+  font-size: 3.7rem;
 }
 
 .content-wrapper {
@@ -54,6 +54,9 @@ h1 {
   .card-submission {
     flex-direction: column;
   }
+  .card-submission h1 {
+    font-size: 3rem;
+  }
 
   .image-wrapper {
     width: 100%;
@@ -73,6 +76,8 @@ h1 {
 li {
   list-style: none;
   margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
 }
 
 ul {
@@ -85,12 +90,13 @@ label {
   color: var(--blue700);
 }
 
-article {
+.content-description {
   margin-bottom: 2rem;
 }
 
-input {
+#email {
   border: 0.1rem solid var(--grey);
+  padding: 10px 15px;
 }
 
 .form-instruction {
@@ -98,7 +104,7 @@ input {
   justify-content: space-between;
   align-content: center;
   margin-bottom: 1rem;
-  font-size: 0.2rem;
+  font-size: 0８rem;
 }
 
 .invalid-email-message {
@@ -117,7 +123,7 @@ input {
 }
 
 .button {
-  border: var(--blue800);
+  border: none;
   background: var(--blue800);
   color: var(--white);
 }

@@ -39,7 +39,7 @@
     <section class="submission-page">
       <main class="card-submission">
         <div class="content-wrapper">
-          <article>
+          <article class="content-description">
             <h1>Stay updated!</h1>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
             <ul class="list">
@@ -60,7 +60,9 @@
           <form>
             <div class="form-instruction">
               <label for="email">Email address</label>
-              <p class="invalid-email-message">Valid email required</p>
+              <p id="email-error" class="invalid-email-message">
+                Valid email required
+              </p>
             </div>
             <input
               type="email"
@@ -68,13 +70,19 @@
               name="email"
               class="submit-input standard-rectangle"
             />
-            <button class="submit-button button standard-rectangle">
+            <button
+              type="submit"
+              class="submit-button button standard-rectangle"
+            >
               Subscribe to monthly newsletter
             </button>
           </form>
         </div>
         <div class="image-wrapper">
-          <img src="assets/images/illustration-sign-up-desktop.svg" />
+          <img
+            src="assets/images/illustration-sign-up-desktop.svg"
+            alt="main image with charts and PC screens"
+          />
         </div>
       </main>
     </section>
@@ -90,7 +98,7 @@
           A confirmation email has been sent to ash@loremcompany.com. Please
           open it and click the button inside to confirm your subscription.
         </p>
-        <button class="button standard-rectangle dismiss">
+        <button type="button" class="button standard-rectangle dismiss">
           Dismiss message
         </button>
       </main>

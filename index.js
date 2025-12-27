@@ -7,13 +7,7 @@ const submissionPage = document.querySelector(".submission-page");
 const thanksPage = document.querySelector(".thanks-page");
 const dismissButton = document.querySelector(".dismiss");
 
-function emailValidation(email) {
-  if (email === "" || !email.includes("@")) {
-    return false;
-  } else {
-    return true;
-  }
-}
+const validEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 function switchPage() {
   submissionPage.classList.toggle("invisible");
@@ -24,7 +18,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = input.value;
 
-  if (!emailValidation(email)) {
+  if (!validEmailRegex.test(email)) {
     submitInput.classList.add("invalid-input");
     invalidMessage.classList.add("active");
 
